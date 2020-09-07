@@ -1,0 +1,32 @@
+<%- include ('../partials/header'); -%>
+
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to my food channel!</h1>
+            <p>View the food I cooked during stay-at-home period</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/food/new">Add New Food</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% food.forEach((f) => { %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= f.image %>" style="max-width:100%">
+                    <div class="caption">
+                        <h5><%= f.name %></h5>
+                    </div>
+                    <p>
+                        <a href="/food/<%= f._id %>" class="btn btn-primary">More info</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>    
+    </div>
+</div>
+
+<%- include ('../partials/footer'); -%>
