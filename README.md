@@ -1,1 +1,1 @@
-This is a website for food lovers posting and sharing food!
+# This is a website for food lovers posting and sharing food!
